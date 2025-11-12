@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom, #18181b, #000);
+            color: white;
+            font-family: system-ui, sans-serif;
+            min-height: 100vh;
+        }
+        .test-box {
+            background: rgba(34, 197, 94, 0.2);
+            border: 2px solid #22c55e;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        h1 { color: #22c55e; }
+        button {
+            background: #22c55e;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-box">
+        <h1>✅ Server is Working!</h1>
+        <p>If you can see this page, the server is responding correctly.</p>
+        <p><strong>This means:</strong></p>
+        <ul>
+            <li>Network connection is OK</li>
+            <li>Port 3000 is accessible</li>
+            <li>HTML/CSS is loading</li>
+        </ul>
+        <p><strong>Issue:</strong> React app not loading</p>
+        <button onclick="location.href='/'">Try Main App</button>
+        <button onclick="testJS()">Test JavaScript</button>
+        <div id="jstest" style="margin-top: 10px;"></div>
+    </div>
+
+    <script>
+        console.log('Test page loaded successfully');
+
+        function testJS() {
+            document.getElementById('jstest').innerHTML =
+                '<p style="color: #22c55e;">✅ JavaScript is working!</p>';
+            console.log('JavaScript test passed');
+        }
+
+        // Log page info
+        console.log('User agent:', navigator.userAgent);
+        console.log('Window size:', window.innerWidth + 'x' + window.innerHeight);
+    </script>
+</body>
+</html>

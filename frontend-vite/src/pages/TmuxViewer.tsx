@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { api, TmuxSession, TmuxPane } from "@/lib/api";
+import { api } from "@/lib/api";
+import type { TmuxSession, TmuxPane } from "@/lib/api";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

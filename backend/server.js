@@ -10,6 +10,7 @@ const cors = require('cors');
 
 // Import routes
 const tmuxRoutes = require('./routes/tmux');
+const executeRoutes = require('./routes/execute');
 
 // Import middleware
 const { notFoundHandler, errorHandler } = require('./middleware/error');
@@ -55,6 +56,7 @@ app.get('/health', (req, res) => {
 
 // API routes
 app.use('/api/tmux', tmuxRoutes);
+app.use('/api/execute', executeRoutes);
 
 // WebSocket stats endpoint
 app.get('/api/stats', (req, res) => {

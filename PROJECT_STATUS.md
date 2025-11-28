@@ -276,9 +276,17 @@ NEXT_PUBLIC_SOCKET_URL=http://localhost:3001
 
 ## Known Issues
 
-1. **Turbopack WASM**: Next.js build shows WASM binding warnings in Termux (non-critical)
-2. **WebSocket Testing**: Need active tmux session for full testing
-3. **Component Pages**: All feature pages show "Not Found" (expected - Phase 3)
+1. **Terminal Execute Route**: The `/api/execute` endpoint has shell spawn issues on Termux - needs investigation for proper `child_process.spawn` configuration
+2. **Tailwind v4**: CSS must use `@import "tailwindcss"` instead of old `@tailwind` directives
+3. **Type Imports**: Use `import type { TmuxPane }` for TypeScript interfaces to avoid module resolution issues
+4. **WebSocket Testing**: Need active tmux session for full testing
+
+## Fixes Applied (Nov 28, 2025)
+
+1. **Migrated to Vite**: Next.js doesn't work on Termux due to missing SWC binaries - now using Vite + React
+2. **CSS Import Fix**: Updated `src/index.css` to use Tailwind v4 syntax
+3. **Type Import Fix**: Fixed `TmuxViewer.tsx` to use `import type` for interfaces
+4. **Execute Route Added**: Created `routes/execute.js` for terminal commands (needs shell fix)
 
 ## Next Milestone: Phase 3
 

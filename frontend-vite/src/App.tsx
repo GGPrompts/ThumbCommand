@@ -4,8 +4,6 @@ import TmuxViewer from './pages/TmuxViewer'
 import Terminal from './pages/Terminal'
 
 function App() {
-  console.log('App component rendering...');
-
   return (
     <BrowserRouter>
       <div className="dark min-h-screen">
